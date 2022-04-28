@@ -38,5 +38,5 @@ app.UseEndpoints(endpoints =>
     endpoints.MapHub<MessageHub>("hubs/message");
     endpoints.MapFallbackToController("Index","Fallback");
 });
-//AppDbInitialer.SeedData(app);
+AppDbInitialer.SeedData(app);
 app.Run();
