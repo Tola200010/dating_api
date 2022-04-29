@@ -18,7 +18,7 @@ namespace API.Entities
         public async static Task SeedUsers(UserManager<AppUser> userManager, RoleManager<AppRole> roleManager)
         {
             if (await userManager.Users!.AnyAsync()) return;
-            var userData = System.IO.File.ReadAllText(@"Entities\UserSeedData.json");
+            var userData = System.IO.File.ReadAllText(@"Entities/UserSeedData.json");
             var users = JsonSerializer.Deserialize<List<AppUser>>(userData);
             int userId = 1;
             var roles = new List<AppRole>{
