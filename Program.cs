@@ -22,6 +22,7 @@ builder.Services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
 builder.Services.AddIdentityService(builder.Configuration);
 builder.Services.AddSignalR();
 var app = builder.Build();
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior",true);
 app.UseMiddleware<ExceptionMiddleware>();
 app.UseHttpsRedirection();
 app.UseRouting();
@@ -31,7 +32,7 @@ app.UseAuthorization();
 app.UseDefaultFiles();
 app.UseStaticFiles();
 app.MapControllers();
-AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior",true);
+
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapHub<PresenceHub>("hubs/presence");

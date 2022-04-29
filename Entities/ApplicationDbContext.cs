@@ -63,10 +63,17 @@ namespace API.Entities
            .HasOne(u => u.Sender)
            .WithMany(m => m.MessageSent)
            .OnDelete(DeleteBehavior.Cascade);
-
             modelBuilder.ApplyUtcDateTimeConverter();
         }
     }
+    public class UtcValueConverter : ValueConverter<DateTime, DateTime>
+    {
+        public UtcValueConverter()
+            : base(v => v, v => DateTime.SpecifyKind(v, DateTimeKind.Utc))
+        {
+        }
+    }
+
     public static class UtcDateAnnotation
     {
         private const string IsUtcAnnotation = "IsUtc";
@@ -125,13 +132,7 @@ namespace API.Entities
             }
         }
     }
-    public class UtcValueConverter : ValueConverter<DateTime, DateTime>
-    {
-        public UtcValueConverter()
-            : base(v => v, v => DateTime.SpecifyKind(v, DateTimeKind.Utc))
-        {
-        }
-    }
+
     [AttributeUsage(AttributeTargets.Property)]
     public class IsUtcAttribute : Attribute
     {

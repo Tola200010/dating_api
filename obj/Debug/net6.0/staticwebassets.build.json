@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tll2tTPg2CitozOUM4evhqcLt+XnD+HMdJqRaaw85Kw=",
+  "Hash": "Ty4et/UcCMU+hnxC3wVFCEk/87zV3FaA4TOj4k/DwMQ=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -170,12 +170,12 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "D:\\05 - Project\\Dating App\\API\\wwwroot\\main.de2178675335efd9.js",
+      "Identity": "D:\\05 - Project\\Dating App\\API\\wwwroot\\main.4b2fcc1972a9fe92.js",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\05 - Project\\Dating App\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "main.de2178675335efd9.js",
+      "RelativePath": "main.4b2fcc1972a9fe92.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -184,7 +184,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\main.de2178675335efd9.js"
+      "OriginalItemSpec": "wwwroot\\main.4b2fcc1972a9fe92.js"
     },
     {
       "Identity": "D:\\05 - Project\\Dating App\\API\\wwwroot\\polyfills.a151bed753c7da9d.js",
@@ -221,12 +221,12 @@
       "OriginalItemSpec": "wwwroot\\runtime.01fec06f14767966.js"
     },
     {
-      "Identity": "D:\\05 - Project\\Dating App\\API\\wwwroot\\styles.841e1d3a44c7277e.css",
+      "Identity": "D:\\05 - Project\\Dating App\\API\\wwwroot\\styles.ee15683b99162534.css",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\05 - Project\\Dating App\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "styles.841e1d3a44c7277e.css",
+      "RelativePath": "styles.ee15683b99162534.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -235,7 +235,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\styles.841e1d3a44c7277e.css"
+      "OriginalItemSpec": "wwwroot\\styles.ee15683b99162534.css"
     }
   ]
 }
