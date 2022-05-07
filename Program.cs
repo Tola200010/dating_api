@@ -22,22 +22,19 @@ builder.Services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
 builder.Services.AddIdentityService(builder.Configuration);
 builder.Services.AddSignalR();
 var app = builder.Build();
-AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior",true);
 app.UseMiddleware<ExceptionMiddleware>();
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseCors("AllowPortFromAngulrClient");
 app.UseAuthentication(); 
 app.UseAuthorization();
-app.UseDefaultFiles();
-app.UseStaticFiles();
 app.MapControllers();
 
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapHub<PresenceHub>("hubs/presence");
     endpoints.MapHub<MessageHub>("hubs/message");
-    endpoints.MapFallbackToController("Index","Fallback");
+ //   endpoints.MapFallbackToController("Index","Fallback");
 });
 AppDbInitialer.SeedData(app);
 app.Run();

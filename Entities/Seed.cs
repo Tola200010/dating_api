@@ -53,7 +53,7 @@ namespace API.Entities
                     getPhoto.PublicId = "0";
                     photos.Add(getPhoto);
                 }
-                appUser.Photos = photos; 
+                appUser.Photos = photos;
                 await userManager.CreateAsync(appUser, "Pa$$w0rd");
                 await userManager.AddToRoleAsync(appUser, "Member");
             }
@@ -85,8 +85,6 @@ namespace API.Entities
                 appUser.Country = user.Country;
                 using var h = new HMACSHA512();
                 appUser.Name = user.Name!.ToLower();
-                //  appUser.PasswordHash = h.ComputeHash(Encoding.UTF8.GetBytes("12345"));
-                //  appUser.PasswordSalt = h.Key;
                 List<Photo> photos = new();
                 foreach (var photo in user.Photos!)
                 {

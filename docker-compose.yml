@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  dating-api:
+    build: .
+    environment:
+      AppConnectionString: "Data Source=167.172.74.14,1433;Initial Catalog=DatingDB;User ID=sa;Password=Tola@t1o2l3"
+      Token: "wefjewoiodvnsoifjewoifovodsjdlfjewoijw0e2-490385vksop"
+      CloudinarySettings:CloudName: "tdigitaldevelopment"
+      CloudinarySettings:ApiKey: "324459343793473"
+      CloudinarySettings:ApiSecret: "AS9dzOMI5urcQdg3LsQKDAHoq4A"
+    ports:
+      - "8080:80"

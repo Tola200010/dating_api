@@ -39,5 +39,9 @@ namespace API.Controllers
         {
             return BadRequest("Bad Request");
         }
+        [HttpGet("get-me")]
+        public ActionResult GetMe(){
+            return Ok("My Name is dotnet");
+        }
     }
 }
