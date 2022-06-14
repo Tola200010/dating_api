@@ -29,7 +29,8 @@ app.UseCors("AllowPortFromAngulrClient");
 app.UseAuthentication(); 
 app.UseAuthorization();
 app.MapControllers();
-
+app.UseSwagger();
+app.UseSwaggerUI();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapHub<PresenceHub>("hubs/presence");
